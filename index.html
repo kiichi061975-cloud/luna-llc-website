@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luna LLC | データと専門知見で、宿泊施設運営を最適化する</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: { 50: '#f0f4f8', 100: '#d9e2ec', 200: '#bcccdc', 300: '#9fb3c8', 400: '#829ab1', 500: '#627d98', 600: '#486581', 700: '#334e68', 800: '#243b53', 900: '#102a43' }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+        body { font-family: 'Noto Sans JP', sans-serif; }
+    </style>
+</head>
+<body class="bg-white text-slate-900">
+    <!-- ヘッダー -->
+    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-200">
+        <div class="container mx-auto px-4 py-5 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center">
+                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                    </svg>
+                </div>
+                <h1 class="text-lg font-bold text-slate-900">Luna LLC</h1>
+            </div>
+            <a href="#contact" class="bg-teal-600 text-white px-6 py-2.5 rounded-lg hover:bg-teal-700 transition-colors font-medium">
+                お問い合わせ
+            </a>
+        </div>
+    </header>
+
+    <!-- メインビジュアル -->
+    <section class="relative py-24 md:py-32 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80" alt="" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-slate-900/70"></div>
+        </div>
+        <div class="container mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
+                データと専門知見で、宿泊施設運営を最適化する
+            </h2>
+            <p class="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto mb-6">
+                実務経験と技術的バックグラウンドで、全工程を支える。それが、Luna LLCの基準です。
+            </p>
+            <p class="text-base text-slate-300 max-w-2xl mx-auto">
+                東京・名古屋・福岡をはじめ、全国で民泊の開拓を推進しています。
+            </p>
+        </div>
+    </section>
+
+    <!-- ビジュアルセクション：民泊・住居イメージ -->
+    <section class="bg-white">
+        <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="rounded-lg overflow-hidden shadow-lg aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="宿泊施設のイメージ" class="w-full h-full object-cover">
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg aspect-[4/3]">
+                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" alt="住居・物件のイメージ" class="w-full h-full object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3つのコア・コンピタンス -->
+    <section class="py-16 md:py-24 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-12">Core Competencies</h2>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-10">
+                <!-- Strategic Management -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-teal-50 rounded-lg flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-3">Strategic Management</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        民泊事業開発での豊富な実績に基づく、物件選定から旅館業申請、運営立ち上げまでの全フェーズ対応。
+                    </p>
+                </div>
+
+                <!-- Technical Excellence -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-teal-50 rounded-lg flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-3">Technical Excellence</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        消防設備士、電気工事士等の国家資格保有者による、安全性とメンテナンス性の高い施設管理。
+                    </p>
+                </div>
+
+                <!-- Global Communication -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-teal-50 rounded-lg flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-base font-bold text-slate-900 mb-3">Global Communication</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        英語対応を標準とした、高度なインバウンドゲスト対応とトラブルシューティング体制。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- サービス内容 -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-12">Services</h2>
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+                <!-- Hospitality Operations -->
+                <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80" alt="宿泊施設インテリア" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4">Hospitality Operations</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            東京・名古屋・福岡をはじめ、全国における高品質な宿泊施設の運営管理。民泊の開拓を全国で推進しています。
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Asset Analysis -->
+                <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm">
+                    <div class="aspect-video overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="都市・不動産イメージ" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-lg font-bold text-slate-900 mb-4">Asset Analysis</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            独自のフレームワークを用いた、精緻な市場調査と収益性の最適化。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 収支シミュレーション・物件コンサル（強み） -->
+    <section class="py-16 md:py-24 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-4">収支シミュレーション・物件コンサル</h2>
+            <p class="text-center text-slate-600 max-w-2xl mx-auto mb-12 text-sm leading-relaxed">
+                民泊運営代行会社で最前線の実務を経験してきた知見を活かし、物件コンサルと収支シミュレーションを自社で完結してご提供します。
+            </p>
+
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+                <!-- 左：シミュレーション内容＋イラスト -->
+                <div class="bg-white rounded-lg p-8 border border-slate-200 shadow-sm">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                            </svg>
+                        </div>
+                        <p class="text-slate-700 font-medium">ご提供するシミュレーションの内容</p>
+                    </div>
+                    <ul class="space-y-4 text-slate-600 text-sm leading-relaxed">
+                        <li class="flex gap-3">
+                            <span class="text-teal-600 font-bold shrink-0">・</span>
+                            <span><strong class="text-slate-800">月別の収支試算</strong> — 売上・費用・利益を月単位で試算し、年間の流れを可視化します。</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-teal-600 font-bold shrink-0">・</span>
+                            <span><strong class="text-slate-800">シーズナリティの反映</strong> — 需要期（桜・紅葉シーズン等）と閑散期を考慮した、現実的な価格設定と稼働率の計画です。</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-teal-600 font-bold shrink-0">・</span>
+                            <span><strong class="text-slate-800">近隣リスティングに基づく根拠</strong> — 同エリア・同規模の複数物件の実績データを参照し、ADR（客単価）と稼働率の目安を客観的に提示します。</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-teal-600 font-bold shrink-0">・</span>
+                            <span><strong class="text-slate-800">法令を前提とした費用構造</strong> — 家賃・光熱費・保険・清掃・旅館業・消防等を織り込んだ、実務に即した費用項目の精査です。</span>
+                        </li>
+                        <li class="flex gap-3">
+                            <span class="text-teal-600 font-bold shrink-0">・</span>
+                            <span><strong class="text-slate-800">市場データと補足説明</strong> — 算出根拠および前提条件を明文化し、ご判断いただきやすい形でお渡しします。</span>
+                        </li>
+                    </ul>
+                    <p class="mt-8 pt-6 border-t border-slate-200 text-slate-600 text-sm">
+                        物件の収益性を「感覚」ではなくデータで見える化し、申し込み・契約の判断をサポートします。ご検討中のエリア・物件があれば、お気軽にご相談ください。
+                    </p>
+                </div>
+
+                <!-- 右：サンプル提出物（ぼかし＋グラフ） -->
+                <div class="bg-white rounded-lg p-6 border border-slate-200 shadow-sm">
+                    <p class="text-slate-600 text-sm font-medium mb-4">提出イメージ（サンプル）</p>
+                    <div class="space-y-4">
+                        <!-- 簡易グラフ（月別収益のイメージ） -->
+                        <div class="bg-slate-50 rounded-lg p-4">
+                            <p class="text-xs text-slate-500 mb-3">月別収益イメージ</p>
+                            <div class="flex items-end gap-1 h-24">
+                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 65%"></div>
+                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 55%"></div>
+                                <div class="flex-1 bg-teal-600 rounded-t" style="height: 95%"></div>
+                                <div class="flex-1 bg-teal-600 rounded-t" style="height: 100%"></div>
+                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 60%"></div>
+                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 45%"></div>
+                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 55%"></div>
+                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 35%"></div>
+                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 30%"></div>
+                                <div class="flex-1 bg-teal-600 rounded-t" style="height: 95%"></div>
+                                <div class="flex-1 bg-teal-600 rounded-t" style="height: 95%"></div>
+                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 75%"></div>
+                            </div>
+                            <div class="flex justify-between mt-1 text-xs text-slate-400">
+                                <span>1月</span><span>4月</span><span>7月</span><span>10月</span><span>12月</span>
+                            </div>
+                        </div>
+                        <!-- サンプル表（ぼかし） -->
+                        <div class="overflow-hidden rounded-lg border border-slate-200">
+                            <table class="w-full text-xs">
+                                <thead>
+                                    <tr class="bg-slate-100">
+                                        <th class="py-2 px-3 text-left font-medium text-slate-600">月</th>
+                                        <th class="py-2 px-3 text-right font-medium text-slate-600">売上</th>
+                                        <th class="py-2 px-3 text-right font-medium text-slate-600">費用</th>
+                                        <th class="py-2 px-3 text-right font-medium text-slate-600">利益</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-t border-slate-100"><td class="py-2 px-3 text-slate-600">1月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
+                                    <tr class="border-t border-slate-100"><td class="py-2 px-3 text-slate-600">2月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
+                                    <tr class="border-t border-slate-100 bg-teal-50/50"><td class="py-2 px-3 text-slate-600">3月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
+                                    <tr class="border-t border-slate-100 bg-teal-50/50"><td class="py-2 px-3 text-slate-600">4月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
+                                    <tr class="border-t border-slate-100"><td class="py-2 px-3 text-slate-600">…</td><td class="py-2 px-3 text-right text-slate-400">…</td><td class="py-2 px-3 text-right text-slate-400">…</td><td class="py-2 px-3 text-right text-slate-400">…</td></tr>
+                                    <tr class="border-t border-slate-100 bg-teal-50/50"><td class="py-2 px-3 text-slate-600">10月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
+                                    <tr class="border-t border-slate-100 bg-teal-50/50"><td class="py-2 px-3 text-slate-600">11月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
+                                    <tr class="border-t border-slate-100"><td class="py-2 px-3 text-slate-600">12月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr class="bg-slate-100 font-medium">
+                                        <td class="py-2 px-3 text-slate-700">年間合計</td>
+                                        <td class="py-2 px-3 text-right text-slate-500">●●●</td>
+                                        <td class="py-2 px-3 text-right text-slate-500">●●●</td>
+                                        <td class="py-2 px-3 text-right text-teal-700">●●●</td>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+                        <p class="text-xs text-slate-500">※ このような形式で、物件ごとにシミュレーションをご提出します。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 会社概要 -->
+    <section class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-12">Company</h2>
+            <div class="max-w-2xl mx-auto bg-slate-50 rounded-lg p-8 md:p-10 border border-slate-200">
+                <dl class="space-y-5">
+                    <div class="flex flex-col md:flex-row md:items-start gap-1">
+                        <dt class="text-slate-600 font-medium md:w-28 md:flex-shrink-0">会社名</dt>
+                        <dd class="text-slate-900 font-semibold">Luna LLC</dd>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-1">
+                        <dt class="text-slate-600 font-medium md:w-28 md:flex-shrink-0">代表社員</dt>
+                        <dd class="text-slate-900 font-semibold">恒川 喜一</dd>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-1">
+                        <dt class="text-slate-600 font-medium md:w-28 md:flex-shrink-0">本店所在地</dt>
+                        <dd class="text-slate-900">〒150-0044 東京都渋谷区円山町5番3号 MIEUX渋谷ビル8階</dd>
+                    </div>
+                    <div class="flex flex-col md:flex-row md:items-start gap-1">
+                        <dt class="text-slate-600 font-medium md:w-28 md:flex-shrink-0">設立日</dt>
+                        <dd class="text-slate-900">2026年1月</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <!-- お問い合わせ -->
+    <section id="contact" class="py-16 md:py-24 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-12">Contact</h2>
+            <div class="max-w-xl mx-auto bg-white rounded-lg p-8 border border-slate-200">
+                <p class="text-slate-600 text-center mb-6 text-sm">
+                    お問い合わせは下記メールアドレスまでご連絡ください。
+                </p>
+                <div class="text-center">
+                    <a href="mailto:info@lunallc.biz" class="inline-block bg-teal-600 text-white px-8 py-4 rounded-lg hover:bg-teal-700 transition-colors font-medium">
+                        info@lunallc.biz
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="bg-teal-600 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm">&copy; 2026 Luna LLC. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
