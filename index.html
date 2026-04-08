@@ -3,286 +3,438 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luna LLC | データと専門知見で、宿泊施設運営を最適化する</title>
+    <title>Luna LLC | 宿泊施設の運営最適化と民泊立ち上げ支援</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        navy: { 50: '#f0f4f8', 100: '#d9e2ec', 200: '#bcccdc', 300: '#9fb3c8', 400: '#829ab1', 500: '#627d98', 600: '#486581', 700: '#334e68', 800: '#243b53', 900: '#102a43' }
+                        navy: { 50: '#f0f4f8', 100: '#d9e2ec', 200: '#bcccdc', 300: '#9fb3c8', 400: '#829ab1', 500: '#627d98', 600: '#486581', 700: '#334e68', 800: '#243b53', 900: '#102a43' },
+                        warm: { 50: '#faf8f5', 100: '#f0ebe4', 200: '#e0d5c8' }
                     }
                 }
             }
         }
     </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Noto+Serif+JP:wght@400;600&display=swap');
         body { font-family: 'Noto Sans JP', sans-serif; }
+        .font-serif-jp { font-family: 'Noto Serif JP', serif; }
+        .fade-in { animation: fadeIn 0.8s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-<body class="bg-white text-slate-900">
+<body class="bg-white text-slate-800">
+
     <!-- ヘッダー -->
-    <header class="bg-white shadow-sm sticky top-0 z-50 border-b border-slate-200">
-        <div class="container mx-auto px-4 py-5 flex justify-between items-center">
+    <header class="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50 border-b border-slate-100">
+        <div class="container mx-auto px-4 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-teal-600 rounded-lg flex items-center justify-center">
-                    <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                    </svg>
+                <div class="w-9 h-9 bg-slate-800 rounded-md flex items-center justify-center">
+                    <span class="text-white font-bold text-sm tracking-wider">L</span>
                 </div>
-                <h1 class="text-lg font-bold text-slate-900">Luna LLC</h1>
+                <div>
+                    <h1 class="text-base font-bold text-slate-900 leading-tight">Luna LLC</h1>
+                    <p class="text-[10px] text-slate-400 tracking-widest">合同会社Luna</p>
+                </div>
             </div>
-            <a href="#contact" class="bg-teal-600 text-white px-6 py-2.5 rounded-lg hover:bg-teal-700 transition-colors font-medium">
+            <nav class="hidden md:flex items-center space-x-8 text-sm text-slate-600">
+                <a href="#services" class="hover:text-slate-900 transition-colors">事業内容</a>
+                <a href="#setup" class="hover:text-slate-900 transition-colors">立ち上げ支援</a>
+                <a href="#portfolio" class="hover:text-slate-900 transition-colors">実績</a>
+                <a href="#representative" class="hover:text-slate-900 transition-colors">代表について</a>
+                <a href="#company" class="hover:text-slate-900 transition-colors">会社概要</a>
+            </nav>
+            <a href="#contact" class="bg-slate-800 text-white px-5 py-2 rounded-md hover:bg-slate-700 transition-colors text-sm font-medium">
                 お問い合わせ
             </a>
         </div>
     </header>
 
     <!-- メインビジュアル -->
-    <section class="relative py-24 md:py-32 overflow-hidden">
-        <div class="absolute inset-0">
-            <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=1920&q=80" alt="" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-slate-900/70"></div>
+    <section class="relative py-20 md:py-28 overflow-hidden bg-slate-900">
+        <div class="absolute inset-0 opacity-30">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80" alt="" class="w-full h-full object-cover">
         </div>
-        <div class="container mx-auto px-4 relative z-10 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">
-                データと専門知見で、宿泊施設運営を最適化する
-            </h2>
-            <p class="text-lg md:text-xl text-slate-200 max-w-2xl mx-auto mb-6">
-                実務経験と技術的バックグラウンドで、全工程を支える。それが、Luna LLCの基準です。
-            </p>
-            <p class="text-base text-slate-300 max-w-2xl mx-auto">
-                東京・名古屋・福岡をはじめ、全国で民泊の開拓を推進しています。
-            </p>
-        </div>
-    </section>
-
-    <!-- ビジュアルセクション：民泊・住居イメージ -->
-    <section class="bg-white">
-        <div class="max-w-6xl mx-auto px-4 py-12 md:py-16">
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="rounded-lg overflow-hidden shadow-lg aspect-[4/3]">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=800&q=80" alt="宿泊施設のイメージ" class="w-full h-full object-cover">
-                </div>
-                <div class="rounded-lg overflow-hidden shadow-lg aspect-[4/3]">
-                    <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80" alt="住居・物件のイメージ" class="w-full h-full object-cover">
-                </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-2xl">
+                <p class="text-slate-400 text-sm tracking-widest mb-4">LUNA LLC — TOKYO</p>
+                <h2 class="font-serif-jp text-3xl md:text-4xl font-semibold text-white mb-6 leading-relaxed">
+                    宿泊事業の立ち上げから<br>運営最適化まで、一貫して。
+                </h2>
+                <p class="text-slate-300 text-base leading-relaxed max-w-xl">
+                    民泊運営の最前線で培った実務経験と、消防設備士・電気工事士の技術的知見。データに基づく収支分析と、空間づくりの感性。その両方を持つからこそ、オーナー様に寄り添った提案ができます。
+                </p>
             </div>
         </div>
     </section>
 
-    <!-- 3つのコア・コンピタンス -->
-    <section class="py-16 md:py-24 bg-slate-50">
+    <!-- サービス概要（2本柱） -->
+    <section id="services" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-12">Core Competencies</h2>
-            <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-10">
-                <!-- Strategic Management -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-teal-50 rounded-lg flex items-center justify-center mx-auto mb-5">
-                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-                        </svg>
+            <div class="text-center mb-14">
+                <p class="text-slate-400 text-xs tracking-widest mb-2">SERVICES</p>
+                <h2 class="font-serif-jp text-2xl md:text-3xl font-semibold text-slate-900">事業内容</h2>
+            </div>
+
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
+                <!-- 運営最適化 -->
+                <div class="group bg-white rounded-lg border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=800&q=80" alt="宿泊施設運営" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-3">Strategic Management</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        民泊事業開発での豊富な実績に基づく、物件選定から旅館業申請、運営立ち上げまでの全フェーズ対応。
-                    </p>
+                    <div class="p-7">
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">宿泊施設の運営最適化</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            東京・名古屋・福岡をはじめ全国で民泊の開拓を推進。物件選定から旅館業申請、運営立ち上げ、日々のオペレーション改善まで全フェーズに対応します。
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded">物件コンサル</span>
+                            <span class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded">収支シミュレーション</span>
+                            <span class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded">許認可申請サポート</span>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Technical Excellence -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-teal-50 rounded-lg flex items-center justify-center mx-auto mb-5">
-                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
+                <!-- 立ち上げ支援・インテリア -->
+                <div class="group bg-white rounded-lg border border-slate-200 overflow-hidden hover:shadow-lg transition-shadow">
+                    <div class="aspect-[16/10] overflow-hidden bg-slate-100">
+                                <img src="interior_clean_4ewtsz4ewtsz4ewt.png" alt="インテリアデザイン" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-3">Technical Excellence</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        消防設備士、電気工事士等の国家資格保有者による、安全性とメンテナンス性の高い施設管理。
-                    </p>
-                </div>
-
-                <!-- Global Communication -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-teal-50 rounded-lg flex items-center justify-center mx-auto mb-5">
-                        <svg class="w-8 h-8 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                        </svg>
+                    <div class="p-7">
+                        <h3 class="text-lg font-bold text-slate-900 mb-3">民泊立ち上げ支援・インテリアデザイン</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            空間設計から家具選定、設営まで一貫対応。運営者目線で「ゲストに選ばれ、かつ運営しやすい」空間を、適正価格でご提案します。
+                        </p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded">空間設計・レイアウト</span>
+                            <span class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded">家具・家電選定</span>
+                            <span class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded">設営・納品</span>
+                        </div>
                     </div>
-                    <h3 class="text-base font-bold text-slate-900 mb-3">Global Communication</h3>
-                    <p class="text-slate-600 text-sm leading-relaxed">
-                        英語対応を標準とした、高度なインバウンドゲスト対応とトラブルシューティング体制。
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- サービス内容 -->
+    <!-- 立ち上げ支援 詳細 -->
+    <section id="setup" class="py-16 md:py-24 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-14">
+                    <p class="text-slate-400 text-xs tracking-widest mb-2">SETUP SUPPORT</p>
+                    <h2 class="font-serif-jp text-2xl md:text-3xl font-semibold text-slate-900 mb-4">民泊立ち上げ支援</h2>
+                    <p class="text-slate-600 text-sm max-w-xl mx-auto leading-relaxed">
+                        「物件は決まったけど、何から始めればいいかわからない」<br>
+                        そんなオーナー様の声に応えるために、立ち上げの全工程をワンストップでサポートします。
+                    </p>
+                </div>
+
+                <!-- 対応フロー -->
+                <div class="grid md:grid-cols-4 gap-6 mb-16">
+                    <div class="bg-white rounded-lg p-6 border border-slate-200">
+                        <div class="text-xs text-slate-400 font-medium mb-3">STEP 01</div>
+                        <h4 class="font-bold text-slate-900 text-sm mb-2">ヒアリング・現地確認</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">物件の確認と、ターゲットゲスト・運営方針・ご予算のすり合わせを行います。</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 border border-slate-200">
+                        <div class="text-xs text-slate-400 font-medium mb-3">STEP 02</div>
+                        <h4 class="font-bold text-slate-900 text-sm mb-2">空間設計・ご提案</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">間取りに基づくレイアウト案と、家具・インテリアのご提案。イメージパースでご確認いただけます。</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 border border-slate-200">
+                        <div class="text-xs text-slate-400 font-medium mb-3">STEP 03</div>
+                        <h4 class="font-bold text-slate-900 text-sm mb-2">調達・施工</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">家具家電の手配、アクセントクロス施工、照明設置など。必要に応じて専門職人と連携します。</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 border border-slate-200">
+                        <div class="text-xs text-slate-400 font-medium mb-3">STEP 04</div>
+                        <h4 class="font-bold text-slate-900 text-sm mb-2">納品・運営開始</h4>
+                        <p class="text-slate-600 text-xs leading-relaxed">搬入・設営を完了し、撮影用のスタイリングまで対応。すぐにリスティング掲載可能な状態でお渡しします。</p>
+                    </div>
+                </div>
+
+                <!-- 対応範囲 -->
+                <div class="bg-white rounded-lg border border-slate-200 p-8 md:p-10">
+                    <h3 class="font-bold text-slate-900 mb-6">対応範囲</h3>
+                    <div class="grid md:grid-cols-2 gap-x-12 gap-y-4 text-sm text-slate-600">
+                        <div class="flex items-start gap-3">
+                            <span class="text-slate-400 mt-0.5">—</span>
+                            <span>インテリアコンセプト設計・レイアウトプランニング</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-slate-400 mt-0.5">—</span>
+                            <span>家具・家電・寝具・リネンの選定と調達</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-slate-400 mt-0.5">—</span>
+                            <span>アクセントクロス・タイルシート等の簡易内装工事</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-slate-400 mt-0.5">—</span>
+                            <span>照明計画と設置（ダウンライト・間接照明等）</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-slate-400 mt-0.5">—</span>
+                            <span>搬入・設営・スタイリング</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-slate-400 mt-0.5">—</span>
+                            <span>リスティング写真撮影用のセットアップ</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-slate-400 mt-0.5">—</span>
+                            <span>収支シミュレーションとの連動（投資回収を意識した提案）</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-slate-400 mt-0.5">—</span>
+                            <span>消防設備・電気周りの安全確認（有資格者対応）</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 収支シミュレーション -->
     <section class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-12">Services</h2>
-            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8">
-                <!-- Hospitality Operations -->
-                <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=800&q=80" alt="宿泊施設インテリア" class="w-full h-full object-cover">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-lg font-bold text-slate-900 mb-4">Hospitality Operations</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            東京・名古屋・福岡をはじめ、全国における高品質な宿泊施設の運営管理。民泊の開拓を全国で推進しています。
-                        </p>
+            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+                <div>
+                    <p class="text-slate-400 text-xs tracking-widest mb-2">FINANCIAL ANALYSIS</p>
+                    <h2 class="font-serif-jp text-2xl font-semibold text-slate-900 mb-6">収支シミュレーション</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed mb-6">
+                        民泊運営代行会社での実務経験を活かし、物件ごとの収益性を「感覚」ではなくデータで可視化します。エリアの需要動向、近隣物件の実績データに基づく客観的な分析で、投資判断をサポートします。
+                    </p>
+                    <div class="space-y-3 text-sm text-slate-600">
+                        <div class="flex items-start gap-3">
+                            <span class="text-slate-400 mt-0.5">—</span>
+                            <span>月別の売上・費用・利益試算（シーズナリティ反映）</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-slate-400 mt-0.5">—</span>
+                            <span>近隣リスティングの実績データに基づくADR・稼働率の根拠提示</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-slate-400 mt-0.5">—</span>
+                            <span>家賃・光熱費・保険・清掃・旅館業許可関連費用の精査</span>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span class="text-slate-400 mt-0.5">—</span>
+                            <span>算出根拠と前提条件の明文化</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Asset Analysis -->
-                <div class="bg-white rounded-lg border border-slate-200 overflow-hidden shadow-sm">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="都市・不動産イメージ" class="w-full h-full object-cover">
+                <!-- サンプルグラフ -->
+                <div class="bg-slate-50 rounded-lg p-6 border border-slate-200">
+                    <p class="text-xs text-slate-500 font-medium mb-4">提出イメージ（サンプル）</p>
+                    <div class="bg-white rounded-lg p-4 mb-4">
+                        <p class="text-xs text-slate-400 mb-3">月別収益推移</p>
+                        <div class="flex items-end gap-1 h-24">
+                            <div class="flex-1 bg-slate-300 rounded-t" style="height: 65%"></div>
+                            <div class="flex-1 bg-slate-300 rounded-t" style="height: 55%"></div>
+                            <div class="flex-1 bg-slate-800 rounded-t" style="height: 95%"></div>
+                            <div class="flex-1 bg-slate-800 rounded-t" style="height: 100%"></div>
+                            <div class="flex-1 bg-slate-300 rounded-t" style="height: 60%"></div>
+                            <div class="flex-1 bg-slate-300 rounded-t" style="height: 45%"></div>
+                            <div class="flex-1 bg-slate-300 rounded-t" style="height: 55%"></div>
+                            <div class="flex-1 bg-slate-300 rounded-t" style="height: 35%"></div>
+                            <div class="flex-1 bg-slate-300 rounded-t" style="height: 30%"></div>
+                            <div class="flex-1 bg-slate-800 rounded-t" style="height: 95%"></div>
+                            <div class="flex-1 bg-slate-800 rounded-t" style="height: 90%"></div>
+                            <div class="flex-1 bg-slate-300 rounded-t" style="height: 75%"></div>
+                        </div>
+                        <div class="flex justify-between mt-1 text-[10px] text-slate-400">
+                            <span>1月</span><span>4月</span><span>7月</span><span>10月</span><span>12月</span>
+                        </div>
                     </div>
-                    <div class="p-8">
-                        <h3 class="text-lg font-bold text-slate-900 mb-4">Asset Analysis</h3>
-                        <p class="text-slate-600 text-sm leading-relaxed">
-                            独自のフレームワークを用いた、精緻な市場調査と収益性の最適化。
-                        </p>
+                    <div class="overflow-hidden rounded border border-slate-200">
+                        <table class="w-full text-xs">
+                            <thead>
+                                <tr class="bg-slate-100">
+                                    <th class="py-2 px-3 text-left font-medium text-slate-500">月</th>
+                                    <th class="py-2 px-3 text-right font-medium text-slate-500">売上</th>
+                                    <th class="py-2 px-3 text-right font-medium text-slate-500">費用</th>
+                                    <th class="py-2 px-3 text-right font-medium text-slate-500">利益</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-t border-slate-100"><td class="py-1.5 px-3 text-slate-500">1月</td><td class="py-1.5 px-3 text-right text-slate-400">●●●</td><td class="py-1.5 px-3 text-right text-slate-400">●●●</td><td class="py-1.5 px-3 text-right text-slate-400">●●●</td></tr>
+                                <tr class="border-t border-slate-100"><td class="py-1.5 px-3 text-slate-500">2月</td><td class="py-1.5 px-3 text-right text-slate-400">●●●</td><td class="py-1.5 px-3 text-right text-slate-400">●●●</td><td class="py-1.5 px-3 text-right text-slate-400">●●●</td></tr>
+                                <tr class="border-t border-slate-100 bg-slate-50"><td class="py-1.5 px-3 text-slate-500">3月</td><td class="py-1.5 px-3 text-right text-slate-400">●●●</td><td class="py-1.5 px-3 text-right text-slate-400">●●●</td><td class="py-1.5 px-3 text-right text-slate-400">●●●</td></tr>
+                                <tr class="border-t border-slate-100"><td class="py-1.5 px-3 text-slate-500">…</td><td class="py-1.5 px-3 text-right text-slate-400">…</td><td class="py-1.5 px-3 text-right text-slate-400">…</td><td class="py-1.5 px-3 text-right text-slate-400">…</td></tr>
+                            </tbody>
+                            <tfoot>
+                                <tr class="bg-slate-100 font-medium">
+                                    <td class="py-2 px-3 text-slate-600">年間合計</td>
+                                    <td class="py-2 px-3 text-right text-slate-500">●●●</td>
+                                    <td class="py-2 px-3 text-right text-slate-500">●●●</td>
+                                    <td class="py-2 px-3 text-right text-slate-800">●●●</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                    <p class="text-[10px] text-slate-400 mt-3">※ 物件ごとにカスタマイズしたシミュレーションをお渡しします</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 強み（3つ） -->
+    <section class="py-16 md:py-24 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-14">
+                <p class="text-slate-400 text-xs tracking-widest mb-2">WHY LUNA LLC</p>
+                <h2 class="font-serif-jp text-2xl md:text-3xl font-semibold text-slate-900">選ばれる理由</h2>
+            </div>
+            <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-900 mb-3">技術的裏付け</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        消防設備士（乙6類）・第二種電気工事士の国家資格を保有。消火器の適正配置から電気設備の安全確認まで、自社でカバーします。
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-900 mb-3">データドリブンな提案</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        民泊運営代行会社での実務経験に基づく、市場データと収支分析。「感覚」ではなく数字で投資判断をサポートします。
+                    </p>
+                </div>
+                <div class="text-center">
+                    <div class="w-14 h-14 bg-slate-800 rounded-full flex items-center justify-center mx-auto mb-5">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-sm font-bold text-slate-900 mb-3">グローバル対応力</h3>
+                    <p class="text-slate-600 text-xs leading-relaxed">
+                        英語対応を標準としたインバウンドゲスト対応体制。トラブルシューティングまで多言語でカバーします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 代表について -->
+    <section id="representative" class="py-16 md:py-24 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-14">
+                    <p class="text-slate-400 text-xs tracking-widest mb-2">REPRESENTATIVE</p>
+                    <h2 class="font-serif-jp text-2xl md:text-3xl font-semibold text-slate-900">代表について</h2>
+                </div>
+                <div class="grid md:grid-cols-5 gap-10 items-start">
+                    <!-- 写真 -->
+                    <div class="md:col-span-2">
+                        <div class="aspect-[3/4] rounded-lg overflow-hidden bg-slate-100">
+                            <img src="profile_clean.png" alt="代表 恒川喜一" class="w-full h-full object-cover">
+                        </div>
+                    </div>
+                    <!-- テキスト -->
+                    <div class="md:col-span-3">
+                        <h3 class="text-lg font-bold text-slate-900 mb-1">恒川 喜一</h3>
+                        <p class="text-sm text-slate-500 mb-6">代表社員 / Luna LLC</p>
+                        <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
+                            <p>
+                                民泊運営代行会社で最前線の実務を経験した後、2026年1月にLuna LLCを設立。宿泊事業に関わる業務を幅広く手がけています。
+                            </p>
+                            <p>
+                                物件の収益性分析・収支シミュレーションから、空間デザイン・インテリア設営、そして日々の運営最適化まで——オーナー様が本業に集中できるよう、宿泊事業のあらゆる工程をワンストップでサポートします。
+                            </p>
+                            <p>
+                                消防設備士（乙種第6類）、第二種電気工事士の国家資格を保有。消火器の適正設置・点検や、電気設備の安全確認など、宿泊施設に必要な技術的チェックを自社で対応できます。「デザインは良いが実務で使いにくい」といったギャップが生じない、運営者目線のご提案を大切にしています。
+                            </p>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-slate-100">
+                            <p class="text-xs text-slate-400 font-medium mb-3">保有資格</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded">消防設備士（乙種第6類：消火器）</span>
+                                <span class="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded">第二種電気工事士</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 収支シミュレーション・物件コンサル（強み） -->
-    <section class="py-16 md:py-24 bg-slate-50">
+    <!-- ポートフォリオ -->
+    <section id="portfolio" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-4">収支シミュレーション・物件コンサル</h2>
-            <p class="text-center text-slate-600 max-w-2xl mx-auto mb-12 text-sm leading-relaxed">
-                民泊運営代行会社で最前線の実務を経験してきた知見を活かし、物件コンサルと収支シミュレーションを自社で完結してご提供します。
-            </p>
-
-            <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-start">
-                <!-- 左：シミュレーション内容＋イラスト -->
-                <div class="bg-white rounded-lg p-8 border border-slate-200 shadow-sm">
-                    <div class="flex items-center gap-3 mb-6">
-                        <div class="w-12 h-12 bg-teal-50 rounded-lg flex items-center justify-center shrink-0">
-                            <svg class="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-                            </svg>
+            <div class="text-center mb-14">
+                <p class="text-slate-400 text-xs tracking-widest mb-2">PORTFOLIO</p>
+                <h2 class="font-serif-jp text-2xl md:text-3xl font-semibold text-slate-900">実績・事例</h2>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <!-- 事例1: 門前仲町 -->
+                <div class="bg-slate-50 rounded-lg border border-slate-200 overflow-hidden mb-6">
+                    <div class="p-8">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="text-xs bg-slate-800 text-white px-2.5 py-1 rounded">民泊立ち上げ</span>
+                            <span class="text-xs text-slate-400">東京都</span>
                         </div>
-                        <p class="text-slate-700 font-medium">ご提供するシミュレーションの内容</p>
-                    </div>
-                    <ul class="space-y-4 text-slate-600 text-sm leading-relaxed">
-                        <li class="flex gap-3">
-                            <span class="text-teal-600 font-bold shrink-0">・</span>
-                            <span><strong class="text-slate-800">月別の収支試算</strong> — 売上・費用・利益を月単位で試算し、年間の流れを可視化します。</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-teal-600 font-bold shrink-0">・</span>
-                            <span><strong class="text-slate-800">シーズナリティの反映</strong> — 需要期（桜・紅葉シーズン等）と閑散期を考慮した、現実的な価格設定と稼働率の計画です。</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-teal-600 font-bold shrink-0">・</span>
-                            <span><strong class="text-slate-800">近隣リスティングに基づく根拠</strong> — 同エリア・同規模の複数物件の実績データを参照し、ADR（客単価）と稼働率の目安を客観的に提示します。</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-teal-600 font-bold shrink-0">・</span>
-                            <span><strong class="text-slate-800">法令を前提とした費用構造</strong> — 家賃・光熱費・保険・清掃・旅館業・消防等を織り込んだ、実務に即した費用項目の精査です。</span>
-                        </li>
-                        <li class="flex gap-3">
-                            <span class="text-teal-600 font-bold shrink-0">・</span>
-                            <span><strong class="text-slate-800">市場データと補足説明</strong> — 算出根拠および前提条件を明文化し、ご判断いただきやすい形でお渡しします。</span>
-                        </li>
-                    </ul>
-                    <p class="mt-8 pt-6 border-t border-slate-200 text-slate-600 text-sm">
-                        物件の収益性を「感覚」ではなくデータで見える化し、申し込み・契約の判断をサポートします。ご検討中のエリア・物件があれば、お気軽にご相談ください。
-                    </p>
-                </div>
-
-                <!-- 右：サンプル提出物（ぼかし＋グラフ） -->
-                <div class="bg-white rounded-lg p-6 border border-slate-200 shadow-sm">
-                    <p class="text-slate-600 text-sm font-medium mb-4">提出イメージ（サンプル）</p>
-                    <div class="space-y-4">
-                        <!-- 簡易グラフ（月別収益のイメージ） -->
-                        <div class="bg-slate-50 rounded-lg p-4">
-                            <p class="text-xs text-slate-500 mb-3">月別収益イメージ</p>
-                            <div class="flex items-end gap-1 h-24">
-                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 65%"></div>
-                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 55%"></div>
-                                <div class="flex-1 bg-teal-600 rounded-t" style="height: 95%"></div>
-                                <div class="flex-1 bg-teal-600 rounded-t" style="height: 100%"></div>
-                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 60%"></div>
-                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 45%"></div>
-                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 55%"></div>
-                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 35%"></div>
-                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 30%"></div>
-                                <div class="flex-1 bg-teal-600 rounded-t" style="height: 95%"></div>
-                                <div class="flex-1 bg-teal-600 rounded-t" style="height: 95%"></div>
-                                <div class="flex-1 bg-teal-200 rounded-t" style="height: 75%"></div>
-                            </div>
-                            <div class="flex justify-between mt-1 text-xs text-slate-400">
-                                <span>1月</span><span>4月</span><span>7月</span><span>10月</span><span>12月</span>
-                            </div>
+                        <h3 class="text-base font-bold text-slate-900 mb-3">民泊物件 立ち上げ支援</h3>
+                        <p class="text-sm text-slate-600 leading-relaxed mb-4">
+                            民泊物件の立ち上げにおいて、インテリアデザイナーと連携しながら物件の設営をサポート。
+                        </p>
+                        <div class="flex flex-wrap gap-2 text-xs">
+                            <span class="bg-white border border-slate-200 text-slate-600 px-2 py-0.5 rounded">民泊立ち上げ</span>
+                            <span class="bg-white border border-slate-200 text-slate-600 px-2 py-0.5 rounded">設営サポート</span>
                         </div>
-                        <!-- サンプル表（ぼかし） -->
-                        <div class="overflow-hidden rounded-lg border border-slate-200">
-                            <table class="w-full text-xs">
-                                <thead>
-                                    <tr class="bg-slate-100">
-                                        <th class="py-2 px-3 text-left font-medium text-slate-600">月</th>
-                                        <th class="py-2 px-3 text-right font-medium text-slate-600">売上</th>
-                                        <th class="py-2 px-3 text-right font-medium text-slate-600">費用</th>
-                                        <th class="py-2 px-3 text-right font-medium text-slate-600">利益</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr class="border-t border-slate-100"><td class="py-2 px-3 text-slate-600">1月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
-                                    <tr class="border-t border-slate-100"><td class="py-2 px-3 text-slate-600">2月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
-                                    <tr class="border-t border-slate-100 bg-teal-50/50"><td class="py-2 px-3 text-slate-600">3月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
-                                    <tr class="border-t border-slate-100 bg-teal-50/50"><td class="py-2 px-3 text-slate-600">4月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
-                                    <tr class="border-t border-slate-100"><td class="py-2 px-3 text-slate-600">…</td><td class="py-2 px-3 text-right text-slate-400">…</td><td class="py-2 px-3 text-right text-slate-400">…</td><td class="py-2 px-3 text-right text-slate-400">…</td></tr>
-                                    <tr class="border-t border-slate-100 bg-teal-50/50"><td class="py-2 px-3 text-slate-600">10月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
-                                    <tr class="border-t border-slate-100 bg-teal-50/50"><td class="py-2 px-3 text-slate-600">11月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
-                                    <tr class="border-t border-slate-100"><td class="py-2 px-3 text-slate-600">12月</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td><td class="py-2 px-3 text-right text-slate-400">●●●</td></tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr class="bg-slate-100 font-medium">
-                                        <td class="py-2 px-3 text-slate-700">年間合計</td>
-                                        <td class="py-2 px-3 text-right text-slate-500">●●●</td>
-                                        <td class="py-2 px-3 text-right text-slate-500">●●●</td>
-                                        <td class="py-2 px-3 text-right text-teal-700">●●●</td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                        <p class="text-xs text-slate-500">※ このような形式で、物件ごとにシミュレーションをご提出します。</p>
                     </div>
                 </div>
+
+                <p class="text-center text-sm text-slate-400 mt-8">
+                    ※ 事例は随時追加していきます。進行中の案件については守秘義務の範囲内でご紹介可能です。
+                </p>
             </div>
         </div>
     </section>
 
     <!-- 会社概要 -->
-    <section class="py-16 md:py-24 bg-white">
+    <section id="company" class="py-16 md:py-24 bg-slate-50">
         <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-12">Company</h2>
-            <div class="max-w-2xl mx-auto bg-slate-50 rounded-lg p-8 md:p-10 border border-slate-200">
-                <dl class="space-y-5">
-                    <div class="flex flex-col md:flex-row md:items-start gap-1">
-                        <dt class="text-slate-600 font-medium md:w-28 md:flex-shrink-0">会社名</dt>
-                        <dd class="text-slate-900 font-semibold">Luna LLC</dd>
+            <div class="text-center mb-14">
+                <p class="text-slate-400 text-xs tracking-widest mb-2">COMPANY</p>
+                <h2 class="font-serif-jp text-2xl md:text-3xl font-semibold text-slate-900">会社概要</h2>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <dl class="divide-y divide-slate-200">
+                    <div class="py-4 flex flex-col md:flex-row md:items-start gap-1">
+                        <dt class="text-slate-500 text-sm md:w-32 md:flex-shrink-0">商号</dt>
+                        <dd class="text-slate-900 text-sm font-medium">合同会社Luna（Luna LLC）</dd>
                     </div>
-                    <div class="flex flex-col md:flex-row md:items-start gap-1">
-                        <dt class="text-slate-600 font-medium md:w-28 md:flex-shrink-0">代表社員</dt>
-                        <dd class="text-slate-900 font-semibold">恒川 喜一</dd>
+                    <div class="py-4 flex flex-col md:flex-row md:items-start gap-1">
+                        <dt class="text-slate-500 text-sm md:w-32 md:flex-shrink-0">代表社員</dt>
+                        <dd class="text-slate-900 text-sm font-medium">恒川 喜一</dd>
                     </div>
-                    <div class="flex flex-col md:flex-row md:items-start gap-1">
-                        <dt class="text-slate-600 font-medium md:w-28 md:flex-shrink-0">本店所在地</dt>
-                        <dd class="text-slate-900">〒150-0044 東京都渋谷区円山町5番3号 MIEUX渋谷ビル8階</dd>
+                    <div class="py-4 flex flex-col md:flex-row md:items-start gap-1">
+                        <dt class="text-slate-500 text-sm md:w-32 md:flex-shrink-0">設立</dt>
+                        <dd class="text-slate-900 text-sm">2026年1月</dd>
                     </div>
-                    <div class="flex flex-col md:flex-row md:items-start gap-1">
-                        <dt class="text-slate-600 font-medium md:w-28 md:flex-shrink-0">設立日</dt>
-                        <dd class="text-slate-900">2026年1月</dd>
+                    <div class="py-4 flex flex-col md:flex-row md:items-start gap-1">
+                        <dt class="text-slate-500 text-sm md:w-32 md:flex-shrink-0">所在地</dt>
+                        <dd class="text-slate-900 text-sm">〒150-0044 東京都渋谷区円山町5番3号<br>MIEUX渋谷ビル8階</dd>
+                    </div>
+                    <div class="py-4 flex flex-col md:flex-row md:items-start gap-1">
+                        <dt class="text-slate-500 text-sm md:w-32 md:flex-shrink-0">事業内容</dt>
+                        <dd class="text-slate-900 text-sm">
+                            宿泊施設の運営最適化<br>
+                            民泊立ち上げ支援・インテリアデザイン<br>
+                            収支シミュレーション・物件コンサルティング
+                        </dd>
                     </div>
                 </dl>
             </div>
@@ -290,27 +442,68 @@
     </section>
 
     <!-- お問い合わせ -->
-    <section id="contact" class="py-16 md:py-24 bg-slate-50">
+    <section id="contact" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4">
-            <h2 class="text-2xl md:text-3xl font-bold text-center text-slate-900 mb-12">Contact</h2>
-            <div class="max-w-xl mx-auto bg-white rounded-lg p-8 border border-slate-200">
-                <p class="text-slate-600 text-center mb-6 text-sm">
-                    お問い合わせは下記メールアドレスまでご連絡ください。
-                </p>
-                <div class="text-center">
-                    <a href="mailto:info@lunallc.biz" class="inline-block bg-teal-600 text-white px-8 py-4 rounded-lg hover:bg-teal-700 transition-colors font-medium">
-                        info@lunallc.biz
-                    </a>
+            <div class="max-w-xl mx-auto">
+                <div class="text-center mb-10">
+                    <p class="text-slate-400 text-xs tracking-widest mb-2">CONTACT</p>
+                    <h2 class="font-serif-jp text-2xl md:text-3xl font-semibold text-slate-900 mb-4">お問い合わせ</h2>
+                    <p class="text-slate-600 text-sm leading-relaxed">
+                        物件のご相談、収支シミュレーションのご依頼、<br>インテリア設営のお見積もりなど、お気軽にご連絡ください。
+                    </p>
                 </div>
+
+                <form action="https://formspree.io/f/xgopqyqn" method="POST" class="space-y-5">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-slate-700 mb-1">お名前 <span class="text-red-400">*</span></label>
+                        <input type="text" id="name" name="name" required
+                            class="w-full px-4 py-2.5 rounded-md border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-slate-400 focus:border-transparent"
+                            placeholder="山田 太郎">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-slate-700 mb-1">メールアドレス <span class="text-red-400">*</span></label>
+                        <input type="email" id="email" name="email" required
+                            class="w-full px-4 py-2.5 rounded-md border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-slate-400 focus:border-transparent"
+                            placeholder="example@email.com">
+                    </div>
+                    <div>
+                        <label for="inquiry-type" class="block text-sm font-medium text-slate-700 mb-1">ご相談内容</label>
+                        <select id="inquiry-type" name="inquiry-type"
+                            class="w-full px-4 py-2.5 rounded-md border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-slate-400 focus:border-transparent bg-white">
+                            <option value="">選択してください</option>
+                            <option value="simulation">収支シミュレーション・物件コンサル</option>
+                            <option value="setup">民泊立ち上げ支援・インテリア設営</option>
+                            <option value="operation">運営最適化・コンサルティング</option>
+                            <option value="other">その他</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-slate-700 mb-1">メッセージ</label>
+                        <textarea id="message" name="message" rows="4"
+                            class="w-full px-4 py-2.5 rounded-md border border-slate-300 text-sm focus:outline-none focus:ring-2 focus:ring-slate-400 focus:border-transparent resize-vertical"
+                            placeholder="物件の概要やご相談内容をお書きください"></textarea>
+                    </div>
+                    <div class="pt-2">
+                        <button type="submit"
+                            class="w-full bg-slate-800 text-white py-3 rounded-md hover:bg-slate-700 transition-colors text-sm font-medium">
+                            送信する
+                        </button>
+                    </div>
+                </form>
+
+                <p class="text-center text-xs text-slate-400 mt-6">
+                    またはメールで直接ご連絡ください：<a href="mailto:info@lunallc.biz" class="underline hover:text-slate-600">info@lunallc.biz</a>
+                </p>
             </div>
         </div>
     </section>
 
     <!-- フッター -->
-    <footer class="bg-teal-600 text-white py-8">
+    <footer class="bg-slate-900 text-slate-400 py-8">
         <div class="container mx-auto px-4 text-center">
-            <p class="text-sm">&copy; 2026 Luna LLC. All rights reserved.</p>
+            <p class="text-xs">&copy; 2026 Luna LLC. All rights reserved.</p>
         </div>
     </footer>
+
 </body>
 </html>
